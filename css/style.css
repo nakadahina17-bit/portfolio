@@ -1,0 +1,388 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+html {
+  font-size: 100%;
+}
+body {
+    padding-top: 80px;
+    color: #24292e;
+    letter-spacing: 0.05em;
+}
+a,a:visited {
+    color: #24292e;
+    text-decoration: none;
+}
+img {
+    max-width: 100%;
+}
+li {
+    list-style: none;
+}
+p {
+    line-height: 1.8;
+    font-size: 14px;
+}
+h1 {
+    font-size: 60px;
+    font-family: 'Pacifico';
+    background-color: rgba(255, 182, 193, 0.6);
+    padding: 5px 15px;
+    display: inline-block;
+}
+h2 {
+    font-size: 1.5rem;
+    text-align: center;
+    margin-bottom: 65px;
+    padding-bottom: 10px;
+    border-bottom: 3px solid #ffb6c1;
+    display: inline-block;
+}
+h3 {
+    font-size: 16px;
+}
+
+section {
+    padding: 30px 10%; 
+}
+
+@media screen and (max-width: 414px) {
+	h2 {
+        margin-bottom: 30px;
+    }
+}
+html {
+    scroll-behavior: smooth;
+}
+#page-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #ffb6c1;
+    color: #fff;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 50px;
+    font-size: 20px;
+}
+/*-------------------------------------------
+・ `max-width: 100%;` ヘッダーの横幅を画面の左右いっぱいに広げます。
+・ `background-color: #fff;`ヘッダーの背景色を白色にします。
+ブラウザを更新しても、見た目は特に変わりはありません。
+
+続いて、displayとjustify-contentを記述します。
+画面を更新すると、サイト名リンクとメニューリストが左右に分かれて横並びで表示されるようになった。
+これは、flexboxというレイアウト方法で、display: flex;と指定するだけで要素が横並びになります。
+justify-content という属性を指定すると、要素の配置方法が設定できます。
+今回はspace-betweenを指定しました。これは、flexboxアイテムの最初（左）を起点、最後を終点とし、残りの要素を均等に配置できる指定方法です。
+今回は要素が2つ（サイト名リンクとメニューリスト）のため、両端に表示されています。
+
+次に、ヘッダーの高さと余白を指定します。
+height: 80px;で縦幅を80pxにし、padding: 0 4%;でヘッダーの左右に画面幅に対して4%の余白を設定します。
+左右に余白（緑色の部分）ができ、縦幅が少し広がったことが分かります。
+余白の指定方法は様々あります。
+
+次に、align-itemsを指定します。
+これは、縦方向の揃え位置を指定するプロパティです。
+align-items: center;と指定することにより、上寄せで表示されていた要素が、縦方向に対して中心に寄ったことがわかります。
+
+最後に、positionとtopを指定し、ヘッダーを上部に固定します。
+header全体の設定は以上です。
+-------------------------------------------*/
+header {
+    max-width: 100%;
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+    padding: 0 4%;
+    align-items: center;
+}
+
+/*-------------------------------------------
+メインビジュアル
+-------------------------------------------*/
+
+.main-visual{     
+    width: 100%;
+    height: 550px;
+    background-image: url(../img/canva-green-mountain-illustration-MAHFOydt6fE.png);
+    background-size: cover;
+    color: #FFF;
+    text-align: center;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-visual p {
+    margin-top: 20px;
+    font-size: 18px;
+}
+
+/*-------------------------------------------
+About
+-------------------------------------------*/
+
+#about {
+        text-align:  center;
+    }
+
+#about h3 {
+        margin: 0;
+    }
+
+#about-name {
+        flex-direction: column;
+        align-items: center;
+    }
+
+#about-detail {
+        flex-direction: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+#about-detail p {
+        text-align: left;
+        margin-top: 30px;
+        width: 100%;
+    }
+
+#about h2{
+    margin-top: 40px;
+}
+
+#about h3 {
+    margin-right: 10px;
+}
+
+#about p{
+    width: 80%;
+}
+
+#about img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    border-style: solid;
+    border-width: 1px;
+}
+
+#about-name{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+#about-detail {
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+}
+
+/*-------------------------------------------
+Skills
+-------------------------------------------*/
+#skills {
+    background-color: #f5f5f5;
+}
+
+#skills h3 {
+    margin-bottom: 10px;
+}
+
+.skill-list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.skill-item {
+    width: 30%;
+    background-color: #fff;
+	border-radius: 16px;
+    margin-bottom: 23px;
+	padding: 30px;
+    box-sizing: border-box;
+}
+
+/*-------------------------------------------
+Works
+-------------------------------------------*/
+.work-item {
+    flex-direction: column;
+}
+
+#works img {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.work-description {
+    width: 100%;
+}
+
+.work-item {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+
+#works img{
+    width: 50%;
+}
+
+.work-description{
+    margin-left: 10px;
+    width: 50%;
+}
+
+.work-description p {
+    margin-top: 10px;
+}
+
+/*-------------------------------------------
+Contact
+-------------------------------------------*/
+#contact form {
+    text-align: center;
+}
+
+#contact input {
+    width: 100%;
+}
+
+#contact dl{
+    flex-direction: column;
+    width: 100%;
+}
+
+#contact dt{
+    width: auto;
+    margin-bottom: 5px;
+}
+
+#contact dd{
+    width: 90%;
+}
+
+
+#contact {
+    background-color: #ffcace;
+    text-align: center;
+}
+
+input[type="email"]{
+    padding: 10px;
+    width: 65%;
+    color:#999;
+    border:1px solid #999;
+  }
+  textarea{
+    padding: 10px;
+    height: 100px;
+    color:#999;
+    font-size: 14px;
+    width: 65%;
+    border:1px solid #999;
+  }
+  button{
+    background: #5250e0;
+    color: white;
+    font-size:16px;
+    font-weight:bold;
+    padding: 10px 20px;
+    margin: 0 5px;
+  }
+#contact {
+    background-color: #EBDFE0;
+}  
+
+#contact form{
+    width:70%;
+    margin: 0 auto;
+}
+
+#contact dl {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+#contact dt {
+    width: 15%;
+    font-size: 13px;
+}
+
+#contact dd {
+    width: 85%;
+    margin-bottom: 10px;
+}
+
+#contact dd input,
+#contact dd textarea {
+    width: 100%;
+    border: solid 1px #999999;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 8px;
+}
+
+#contact dd textarea {
+    height: 10rem;
+}
+
+#contact .button {
+    text-align: center;
+}
+
+#contact .button input {
+    width: 200px;
+    background-color: #24292e;
+    color: #fff;
+    padding: 15px 0;
+    border: solid 1px #24292e;
+}
+
+#contact .button input:hover {
+    background: #fff;
+    color: #24292e;
+}
+
+/*-------------------------------------------
+CSSを記述する。
+CSSファイルに下記を追記しましょう。
+
+footer {
+    background-color: #24292e;
+    color: #fff;
+    font-size: 0.5rem;
+    padding: 10px 20px;
+    text-align: center;
+}
+
+- background-color：背景色を指定しています。
+- color：文字色を指定しています。
+- font-size：文字の大きさを指定しています。
+remという指定方法については、下記記事が参考になります。
+https://www.pc-koubou.jp/magazine/23912
+- padding：フッター要素内に上下10px、左右20pxの余白を設けています。
+- text-align：水平方向の配置をcenter（中心）に設定しています。
+
+以上でヘッダー・フッターの作成は完了です。
+お疲れ様でした！
+-------------------------------------------*/
+
+footer {
+    background-color: #24292e;
+    color: #fff;
+    font-size: 0.5rem;
+    padding: 10px 20px;
+    text-align: center;
+}
+

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex" />
+    <title>hina's Portfolio</title>
+		<link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- <header></header>の間に、サイト名リンクとメニューリストを追加していきます。
+    ①まずはサイト名リンクを作成しましょう。
+リンクを表すタグは`a`タグです。
+
+aタグには、「hanako’s works」という文字をクリックしたらindex.htmlに遷移するように、href属性とURLを記述します。
+href属性は[相対パス]で指定します。 
+
+②次に、メニューを作成します。
+メニューのエリアだと明示的に表現するために、navタグを記述します。
+navは、ナビゲーションの意味で、headerタグやfooterタグなどと同じく、「ここがナビゲーションメニューです」と表現するためのタグです。
+まずは先ほど追加したaタグの下に、navタグを記述しましょう。
+
+`nav`タグの中に、メニューリストを記述します。
+リストには、`ul`、`li`タグを使用します。
+
+`ul`はUnordered Listの略で、順序のないリスト（箇条書きリスト）を表示する要素です。
+リストの各項目は`li`で記述します。
+
+リストを表示するタグには、`ol`もあります。
+`ol`タグはOrdered Listの略で、番号付きリストを作るためのタグです。
+`ol`リストの各項目は`li`で記述します。-->
+	<header>
+        <a href="index.html">hina's works</a>
+        <nav>
+            <ul>
+				<li><a href="#about">About</a></li>
+				<li><a href="#skills">Skills</a></li>
+				<li><a href="#works">Works</a></li>
+				<li><a href="#contact">Contact</a></li>
+			</ul>
+        </nav>
+    </header>
+    <!-- メインビジュアル  -->
+     <div class="main-visual">
+        <div>
+            <h1>hina's portfolio site</h1>
+            <p>web engineer</p>
+        </div>
+    </div>
+    <!-- About -->
+     <section id="about">
+        <h2>About</h2>
+        <div id="about-name">
+            <h3>中田陽菜</h3>
+            <p>nakada hina</p>
+        </div>
+        <div id="about-detail">
+             <img src="img/17529_color.png">
+            <p>
+                こんにちは！中田陽菜です。<br>
+                東京家政大学栄養学部栄養学科在学中。<br>
+                大学二年の2月からプログラミングに興味を持ちただいま勉強中。<br>
+                座右の銘は「感謝 尊敬 ストイック」<br>
+                mbtiはinfp冒険家です。<br>
+                インターン未経験。<br>
+                登山インカレに所属<br>
+                趣味は登山・散歩・美食めぐり。
+                
+            </p>
+           
+        </div>
+
+     </section>
+     <!-- Skills -->
+      <section id="skills">
+        <h2>Skills</h2>
+        <div class="skill-list">
+            <div class="skill-item">
+                <h3>HTML / CSS</h3>
+                <p>未経験未領域の分野であり、独学が必要であったため、学習サイトで学び学習過程の成果物として、ポートフォリオを作成しました。</p>
+            </div>
+            <div class="skill-item">
+                <h3>JavaScript / Nodsubetee.js</h3>
+               <p>フロントサイドでは、動きのある動作を作るために使用しました。 Node.js は、ビルドに使用したことがあります。</p>
+          </div>
+          <div class="skill-item">
+              <h3>PHP</h3>
+              <p>Laravel というフレームワークで データベースを操作する、アプリケーションを制作しました。</p>
+          </div>
+          <div class="skill-item">
+              <h3>MySQL</h3>
+              <p>簡単なSQL文が書けます。PostgreSQL 等の他のデータベースも挑戦しようと思っています。</p>
+          </div>
+          <div class="skill-item">
+              <h3>Photoshop</h3>
+              <p>サークルの公式SNSにアップする写真を加工する際に使用しています。 電線を削除したり、好みの色合いに簡単に変更できて楽しいです。</p>
+          </div>
+          <div class="skill-item">
+              <h3>XD</h3>
+              <p>Web サイトを作成したり、チラシを作成する前の設計に使用しています。</p>
+          </div>
+          
+        </div>
+        
+    </section>
+        <!-- Works -->
+        <section id="works">
+            <h2>Works</h2>
+            <div class="work-item">
+                <img src="./img/canva-green-mountain-illustration-MAHFOydt6fE.png">
+                <div class="work-description">
+                    <h3>ポートフォリオサイト</h3>
+                    <p>現在表示しているサイトです。 学習サイトを参考にしながら、制作しました。 初めて自分の手で Web ページを作成することを知りました。</p>
+                </div>
+            </div>
+        </section>
+        <!-- Contact -->
+	<!-- Contact -->
+<section id="contact">
+    <h2>Contact</h2>
+    <form action="https://docs.google.com/forms/d/e/1FAIpQLSfF3QfogDX0TJsuE6ZTf5fMxnM08eN-6x0SO2Rg_cwW-FN4Cw/viewform?usp=header">
+        <dl>
+            <dt><label for="email">メールアドレス</label></dt>
+            <dd><input id="email" type="email" name="email" placeholder="example@mail.co.jp"></dd>
+
+            <dt><label for="msg">お問い合わせ内容</label></dt>
+            <dd><textarea id="msg" name="message" placeholder="お気軽にお問い合わせください。"></textarea></dd>
+        </dl>
+        <div class="button">
+            <button type="submit">送信</button>
+        </div>
+    </form>
+</section>
+    <!-- 
+    続いて、フッターを作成していきます。
+    今回はフッターに著作権表示を入れるので、pで文字列を設定します。
+    <p>&copy; 2023 tech hanako</p>
+    著作権マークは、特殊文字として入力します。
+
+    HTMLの記述は以上です。
+    -->
+	<footer>
+        <p>&copy; 2026 nakada hina</p>
+        <a href="#" id="page-top">↑</a>
+    </footer>
+</body>
+</html>
